@@ -1,1267 +1,954 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+ <style>
+* {box-sizing: border-box;}
 
-<!DOCTYPE html>
-<html lang="en">
+.mySlides {display: none;}
+img {vertical-align: middle;}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MediWallet - Aiding Clinical Desicions </title>
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/mediwalletlogo2.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/mediwalletlogo2.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/mediwalletlogo2.png">
-    <link rel="manifest" href="http://localhost:8888/assets/images/mediwalletlogo2">
-    <meta name="description" content=" MediWallet - Aiding Clinical Desicions  ">
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="./css2%3Ffamily=Roboto:ital,wght@0,100..900%3B1,100..900&amp;display=swap.html" rel="stylesheet">
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/custom-animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-all.css">
-    <link rel="stylesheet" href="assets/css/jarallax.css">
-    <link rel="stylesheet" href="assets/css/jquery.magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/timePicker.css">
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
+.active01 {
+  background-color: #717171;
+}
 
-    <link rel="stylesheet" href="assets/css/module-css/slider.css">
-    <link rel="stylesheet" href="assets/css/module-css/banner.css">
-    <link rel="stylesheet" href="assets/css/module-css/footer.css">
-    <link rel="stylesheet" href="assets/css/module-css/feature.css">
-    <link rel="stylesheet" href="assets/css/module-css/about.css">
-    <link rel="stylesheet" href="assets/css/module-css/brand.css">
-    <link rel="stylesheet" href="assets/css/module-css/service.css">
-    <link rel="stylesheet" href="assets/css/module-css/project.css">
-    <link rel="stylesheet" href="assets/css/module-css/team.css">
-    <link rel="stylesheet" href="assets/css/module-css/faq.css">
-    <link rel="stylesheet" href="assets/css/module-css/testimonial.css">
-    <link rel="stylesheet" href="assets/css/module-css/blog.css">
-    <link rel="stylesheet" href="assets/css/module-css/contact.css">
-    <link rel="stylesheet" href="assets/css/module-css/sliding-text.css">
-    <link rel="stylesheet" href="assets/css/module-css/newsletter.css">
-    <link rel="stylesheet" href="assets/css/module-css/why-choose.css">
-    <link rel="stylesheet" href="assets/css/module-css/appiontment.css">
-    <link rel="stylesheet" href="assets/css/module-css/counter.css">
-    <link rel="stylesheet" href="assets/css/module-css/before-and-after.css">
-    <link rel="stylesheet" href="assets/css/module-css/video.css">
-    <link rel="stylesheet" href="assets/css/module-css/pricing.css">
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-    <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-<body class="custom-cursor">
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
-
-
-    <div class="page-wrapper">
-        <header class="main-header-five">
-            <div class="main-header-five__wrapper">
-                <nav class="main-menu main-menu-five">
-                    <div class="main-menu-five__wrapper">
-                        <div class="container">
-                            <div class="main-menu-five__wrapper-inner">
-                                <div class="main-menu-five__left">
-                                    <div class="main-menu-five__logo">
-                                        <a href="index.php.html"><img src="assets/images/mediwalletlogo32.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="main-menu-five__main-menu-box">
-                                    <a href="index.php.html#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                    <ul class="main-menu__list">
-                                        <li><a href="index.php.html">Home </a></li>
-                                        <li>
-                                            <a href="about.php.html">About Us</a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="services.php.html">Product Features</a>
-                                            <ul>
-                                            <li><a href="productobjective.php.html"> Product Objective</a></li>
-                                             <li><a href="phrbenefits.php.html">PHR Benefits</a></li>
-                                            <li><a href="healthrecords.php.html">Centralized Health Records</a></li>
-                                            <li><a href="portals.php.html">Individual Portals</a></li>
-                                            <li><a href="personalhealthrecord.php.html">Personal Health Record</a></li>
-                                            <li><a href="cloudbasedarchitecture.php.html">Cloud Based Architecture</a></li>
-                                            <li><a href="informationexchange.php.html">Health Information Exchange</a></li>   
-                                            </ul>
-                                        </li>
-                                        <li><a href="faq.php.html">FAQ's</a></li>
-                                        <li><a href="blog.php.html">Blogs</a></li>
-                                        <li>
-                                            <a href="contact.php.html">Contact Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="main-menu-five__right">
-                                    <div class="main-menu-five__call">
-                                        <div class="main-menu-five__call-icon">
-                                            <img src="assets/images/icon/chat-icon.png" alt="">
-                                        </div>
-                                        <div class="main-menu-five__call-number">
-                                            <p>Hotline</p>
-                                            <h5><a href="tel:+91 89774 41288">+91 89774 41288</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+  <!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <!-- Bootstrap Min CSS --> 
+        <link rel="stylesheet" href="css/css-bootstrap.min.css">
+        <!-- Owl Theme Default Min CSS --> 
+        <link rel="stylesheet" href="css/css-owl.theme.default.min.css">
+        <!-- Owl Carousel Min CSS --> 
+        <link rel="stylesheet" href="css/css-owl.carousel.min.css">
+        <!-- Animate Min CSS --> 
+        <link rel="stylesheet" href="css/css-animate.min.css">
+        <!-- Flaticon CSS --> 
+		<link rel="stylesheet" href="css/css-flaticon.css">
+        <!-- Font Awesome Min CSS --> 
+		<link rel="stylesheet" href="css/css-fontawesome.min.css">
+        <!-- Imagelightbox Min CSS --> 
+		<link rel="stylesheet" href="css/css-imagelightbox.min.css">
+        <!-- Meanmenu Min CSS -->
+        <link rel="stylesheet" href="css/css-meanmenu.min.css">
+        <!-- Odometer Min CSS -->
+        <link rel="stylesheet" href="css/css-odometer.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="css/css-style.css">
+        <!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/css-responsive.css">
+		
+		<!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/medilogo.jpg">
+		
+        <!-- Title -->
+        <title>MediWallet - Aiding Clinical Desicions</title>
+    </head>
+    <body>
+		<!-- Start Preloader Area -->
+		<div class="preloader">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
             </div>
-        </header>
-
-        <div class="stricky-header stricked-menu main-menu main-menu-five">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-
-
-  
-
-         <!--Main Slider Start-->
-        <section class="main-slider">
-            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
-                "effect": "fade",
-                "pagination": {
-                "el": "#main-slider-pagination",
-                "type": "bullets",
-                "clickable": true
-                },
-                "navigation": {
-                "nextEl": "#main-slider__swiper-button-next",
-                "prevEl": "#main-slider__swiper-button-prev"
-                },
-                "autoplay": {
-                    "delay": 8000
-                } 
-            }'>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="main-slider__shape-1"></div>
-                        <div class="main-slider__shape-2"></div>
-                        <div class="main-slider__shape-3"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Health Care</p>
-                                        <h2 class="main-slider__title">A centralized </br>location for your</br> health records</h2>
-                                        <p class="main-slider__text">Health care is a vital aspect of maintaining
-                                            overall well-being, <br> encompassing a range of services from preventive
-                                        </p>
-                                        <div class="main-slider__btn-and-video-box">
-                                            <div class="main-slider__btn-box">
-                                                <a href="contact.php.html" class="thm-btn">More About Us <span class="icon-plus"></span> </a>
-                                            </div>
-                                            <div class="main-slider__video-box">
-                                                <div class="main-slider__video-link">
-                                                    <a href="index.php.html#" class="video-popup">
-                                                        <div class="main-slider__video-icon">
-                                                            <span class="fa fa-play"></span>
-                                                            <i class="ripple"></i>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <h4 class="main-slider__video-title">Watch Video</h4>
-                                            </div>
-                                        </div>
-                                        <div class="main-slider__img-box">
-                                            <div class="main-slider__img">
-                                                <img src="assets/images/resources/main-slider-img-24.jpg" alt="">
-                                            </div>
-                                            <div class="main-slider__call">
-                                                <a href="tel:+91 89774 41288"><span class="icon-call"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="main-slider__shape-1"></div>
-                        <div class="main-slider__shape-2"></div>
-                        <div class="main-slider__shape-3"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Health Care</p>
-                                        <h2 class="main-slider__title">A centralized </br>location for your</br> health records</h2>
-                                        <p class="main-slider__text">Health care is a vital aspect of maintaining
-                                            overall well-being, <br> encompassing a range of services from preventive
-                                        </p>
-                                        <div class="main-slider__btn-and-video-box">
-                                            <div class="main-slider__btn-box">
-                                                <a href="contact.php.html" class="thm-btn">More About Us <span class="icon-plus"></span> </a>
-                                            </div>
-                                            <div class="main-slider__video-box">
-                                                <div class="main-slider__video-link">
-                                                    <a href="index.php.html#" class="video-popup">
-                                                        <div class="main-slider__video-icon">
-                                                            <span class="fa fa-play"></span>
-                                                            <i class="ripple"></i>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <h4 class="main-slider__video-title">Watch Video</h4>
-                                            </div>
-                                        </div>
-                                        <div class="main-slider__img-box">
-                                            <div class="main-slider__img">
-                                                <img src="assets/images/resources/main-slider-img-22.jpg" alt="">
-                                            </div>
-                                            <div class="main-slider__call">
-                                                <a href="tel:+91 89774 41288"><span class="icon-call"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="main-slider__shape-1"></div>
-                        <div class="main-slider__shape-2"></div>
-                        <div class="main-slider__shape-3"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Health Care</p>
-                                       <h2 class="main-slider__title">A centralized </br>location for your</br> health records</h2>
-                                        <p class="main-slider__text">Health care is a vital aspect of maintaining
-                                            overall well-being, <br> encompassing a range of services from preventive
-                                        </p>
-                                        <div class="main-slider__btn-and-video-box">
-                                            <div class="main-slider__btn-box">
-                                                <a href="contact.php.html" class="thm-btn">More About Us <span class="icon-plus"></span> </a>
-                                            </div>
-                                            <div class="main-slider__video-box">
-                                                <div class="main-slider__video-link">
-                                                    <a href="index.php.html#" class="video-popup">
-                                                        <div class="main-slider__video-icon">
-                                                            <span class="fa fa-play"></span>
-                                                            <i class="ripple"></i>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <h4 class="main-slider__video-title">Watch Video</h4>
-                                            </div>
-                                        </div>
-                                        <div class="main-slider__img-box">
-                                            <div class="main-slider__img">
-                                                <img src="assets/images/resources/main-slider-img-23.jpg" alt="">
-                                            </div>
-                                            <div class="main-slider__call">
-                                                <a href="tel:+91 89774 41288"><span class="icon-call"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="swiper-pagination" id="main-slider-pagination"></div>
-                <!-- If we need navigation buttons -->
-
-            </div>
-        </section>
-        <!--Main Slider End-->
-
-
-        <!--About Two Start-->
-        <section class="about-two">
-            <div class="container">
-                <div class="about-two__inner">
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div class="about-two__left">
-                                <div class="about-two__img">
-                                    <img src="assets/images/resources/about-two-img-1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="about-two__right">
-                                <div class="section-title-two text-left sec-title-animation animation-style2">
-                                    <h6 class="section-title-two__tagline">About Us
-                                    </h6>
-                                    <h3 class="section-title-two__title title-animation">Your Healthcare is Our Priority
-                                    </h3>
-                                </div>
-                                <p class="about-two__text-1">At Mediwallet, we are revolutionizing the way medical reports are managed by creating a unified platform that brings all your health records into one place. Our innovative tool is designed to seamlessly integrate medical reports, hospital networks, doctor appointments, and lab center services—ensuring patients and healthcare providers have instant access to vital information.
-                                With our platform, users can securely store, access, and share their medical history, reducing paperwork and improving the efficiency of healthcare services. By connecting hospitals, doctors, and diagnostic centers under a single network, we aim to enhance patient care, streamline appointments, and simplify medical record management.</p>
-
-                                <ul class="about-two__points-list list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-plaster"></span>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Our Vision</h3>
-                                            <p>To become the most trusted digital healthcare platform that unifies medical records and healthcare services, empowering individuals with seamless access to their health information anytime, anywhere.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-medicine-2-2"></span>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Our Mission</h3>
-                                            <p>Our mission is to provide a secure platform for managing medical reports while connecting hospitals, doctors, and labs for seamless healthcare access. We simplify appointment booking to ensure timely consultations and tests. By leveraging technology, we enhance healthcare accessibility, transparency, and convenience for patients and providers alike.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                </div>
-                                
-                                <div class="about-two__btn-box" style="text-align: center;">
-                                <a href="about.php.html" class="thm-btn">Read More <span class="icon-plus"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--About Two End-->
-
-        <!--Services Two Start-->
-        <section class="services-two">
-            <div class="container">
-                <div class="section-title-two text-center sec-title-animation animation-style1">
-                    <h6 class="section-title-two__tagline">Our Core Services
-                    </h6>
-                    <h3 class="section-title-two__title title-animation">Compassionate Care Always<br> There Health
-                        First
-                    </h3>
-                </div>
-                <div class="services-two__inner">
-                    <ul class="row list-unstyled">
-                        <!--Services Two Single Start-->
-                        <li class="col-xl-4 col-lg-4">
-                            <div class="services-two__single">
-                                <h3 class="services-two__title"><a href="index.php.html#">One Click Medical Records</a></h3>
-                                <div class="services-two__icon">
-                                    <span class="icon-pills"></span>
-                                </div>
-                                <p class="services-two__text">One Click Medical Records: Securely access, manage, and share your health records anytime, anywhere.</p>
-                                <div class="services-two__btn-box">
-                                    <a href="index.php.html#" class="thm-btn">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!--Services Two Single End-->
-                        <!--Services Two Single Start-->
-                        <li class="col-xl-4 col-lg-4">
-                            <div class="services-two__single">
-                                <h3 class="services-two__title"><a href="index.php.html#">Easy Appointment Booking</a></h3>
-                                <div class="services-two__icon">
-                                    <span class="icon-broken-bone"></span>
-                                </div>
-                                <p class="services-two__text">Effortless appointment booking: Schedule, manage, and track your appointments with ease in just a few clicks</p>
-                                <div class="services-two__btn-box">
-                                    <a href="index.php.html#" class="thm-btn">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!--Services Two Single End-->
-                        <!--Services Two Single Start-->
-                        <li class="col-xl-4 col-lg-4">
-                            <div class="services-two__single">
-                                <h3 class="services-two__title"><a href="index.php.html#">Vitality Health Solutions</a></h3>
-                                <div class="services-two__icon">
-                                    <span class="icon-pills-3"></span>
-                                </div>
-                                <p class="services-two__text">Vitality Health Solutions: Your trusted partner for wellness, offering expert care and innovative solutions</p>
-                                <div class="services-two__btn-box">
-                                    <a href="index.php.html#" class="thm-btn">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!--Services Two Single End-->
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--Services Two End-->
-
-        <!--Project Two Start -->
-        <section class="project-two">
-            <div class="container">
-                <div class="section-title-two text-center sec-title-animation animation-style1">
-                    <h6 class="section-title-two__tagline">Our Product Key Features
-                    </h6>
-                    <h3 class="section-title-two__title title-animation">Your comfort is Our Priority
-                        <br>for Healthier Lives
-                    </h3>
-                </div>
-                <div class="project-two__menu-box">
-                    <ul class="project-filter clearfix post-filter has-dynamic-filters-counter list-unstyled">
-                        <li data-filter=".filter-item" class="active"><span class="filter-text">View All</span></li>
-                        <li data-filter=".bodysurgery"><span class="filter-text">Medical Records</span></li>
-                        <li data-filter=".dentalcare"><span class="filter-text">Doctor Appointments</span></li>
-                        <li data-filter=".allergicissue"><span class="filter-text">Lab Appointments</span></li>
-                        <li data-filter=".eyecare"><span class="filter-text">Data Management</span></li>
-                    </ul>
-                </div>
-                <div class="row filter-layout masonary-layout">
-                    <!--Project Two Single End-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 filter-item bodysurgery">
-                        <div class="project-two__single">
-                            <div class="project-two__img-box">
-                                <div class="project-two__img">
-                                    <img src="assets/images/project/project-4-3.jpg" alt="#">
-                                </div>
-                                <div class="project-two__content-box">
-                                    <h2 class="project-two__title"><a href="index.php.html#">Medical Records</a>
-                                    </h2>
-                                    <p class="project-two__sub-title">Mediwallet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Project Two Single Start-->
-                    <!--Project Two Single End-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 filter-item dentalcare">
-                        <div class="project-two__single">
-                            <div class="project-two__img-box">
-                                <div class="project-two__img">
-                                    <img src="assets/images/project/project-2-3.jpg" alt="#">
-                                </div>
-                                <div class="project-two__content-box">
-                                    <h2 class="project-two__title"><a href="index.php.html#">Doctor Appointments</a>
-                                    </h2>
-                                    <p class="project-two__sub-title">Mediwallet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Project Two Single Start-->
-                    <!--Project Two Single End-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 filter-item allergicissue">
-                        <div class="project-two__single">
-                            <div class="project-two__img-box">
-                                <div class="project-two__img">
-                                    <img src="assets/images/project/project-2-4.jpg" alt="#">
-                                </div>
-                                <div class="project-two__content-box">
-                                    <h2 class="project-two__title"><a href="index.php.html#">Lab Appointments</a>
-                                    </h2>
-                                    <p class="project-two__sub-title">Mediwallet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Project Two Single Start-->
-                    <!--Project Two Single End-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 filter-item eyecare">
-                        <div class="project-two__single">
-                            <div class="project-two__img-box">
-                                <div class="project-two__img">
-                                    <img src="assets/images/project/project-2-2.jpg" alt="#">
-                                </div>
-                                <div class="project-two__content-box">
-                                    <h2 class="project-two__title"><a href="index.php.html#">Data Management</a>
-                                    </h2>
-                                    <p class="project-two__sub-title">Mediwallet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Project Two Single Start-->
-                </div>
-            </div>
-        </section>
-        <!--Project Two End -->
-
-        <!--Counter One Start -->
-        <section class="counter-one">
-            <div class="container">
-                <div class="counter-one__inner">
-                    <ul class="counter-one__count-list list-unstyled">
-                        <li>
-                            <div class="counter-one__count-single">
-                                <div class="counter-one__count-box">
-                                    <h4 class="odometer" data-count="400">00</h4>
-                                    <span>+</span>
-                                </div>
-                                <p class="counter-one__count-text">Hospital<br> Networks</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="counter-one__count-single">
-                                <div class="counter-one__count-box">
-                                    <h4 class="odometer" data-count="20">00</h4>
-                                    <span>K+</span>
-                                </div>
-                                <p class="counter-one__count-text">Patient<br>Records</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="counter-one__count-single">
-                                <div class="counter-one__count-box">
-                                    <h4 class="odometer" data-count="150">00</h4>
-                                    <span>+</span>
-                                </div>
-                                <p class="counter-one__count-text">Medical<br> Services</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="counter-one__count-single">
-                                <div class="counter-one__count-box">
-                                    <h4 class="odometer" data-count="600">00</h4>
-                                    <span>+</span>
-                                </div>
-                                <p class="counter-one__count-text">Lab<br> Centers</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--Counter One End -->
-
-        <!--Why Choose One Start -->
-        <section class="why-choose-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="why-choose-one__left">
-                            <div class="section-title-two text-left sec-title-animation animation-style2">
-                                <h6 class="section-title-two__tagline">Why Chose Us
-                                </h6>
-                                <h3 class="section-title-two__title title-animation">Health care is maintenance or
-                                    improvement
-                                </h3>
-                            </div>
-                            <p class="why-choose-one__text-1">Health care is a vital aspect of maintaining overall
-                                well-being, encompassing a range of services from preventive care to treatment</p>
-                            <ul class="why-choose-one__progress-list list-unstyled">
-                                <li>
-                                    <div class="why-choose-one__progress">
-                                        <h4 class="why-choose-one__progress-title">Wide Range Hospital Network</h4>
-                                        <div class="bar">
-                                            <div class="bar-inner count-bar" data-percent="90%">
-                                                <div class="count-text">90%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="why-choose-one__progress">
-                                        <h4 class="why-choose-one__progress-title">One Stop Solutions for all Medical</h4>
-                                        <div class="bar">
-                                            <div class="bar-inner count-bar" data-percent="80%">
-                                                <div class="count-text">95%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p class="why-choose-one__text-2">Health care is a vital aspect of maintaining overall
-                                well-being, encompassing a range of services from preventive care to treatment</p>
-                            <div class="why-choose-one__btn-and-call-box">
-                                <div class="why-choose-one__btn-box">
-                                    <a href="contact.php.html" class="thm-btn">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                                <div class="why-choose-one__call-box">
-                                    <div class="why-choose-one__call-icon">
-                                        <span class="icon-call"></span>
-                                    </div>
-                                    <div class="why-choose-one__call-content">
-                                        <span>Phone Number</span>
-                                        <p><a href="tel:+91 89774 41288">+91 89774 41288</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="why-choose-one__right wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                            <div class="why-choose-one__img">
-                                <img src="assets/images/resources/why-choose-one-img-1.png" alt="">
-                                <div class="why-choose-one__img-shape-1">
-                                    <img src="assets/images/shapes/why-choose-one-img-shape-1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Why Choose One End -->
-
-        <!--Appiontment One Start -->
-        <section class="appiontment-one">
-            <div class="container">
-                <div class="appiontment-one__inner">
-                    <div class="appiontment-one__img">
-                        <img src="assets/images/resources/why-choose-one.jpg" alt="">
-                        <div class="appiontment-one__appoin-and-working-hour">
-                            <div class="appiontment-one__appion-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                <h3 class="appiontment-one__appion-title">Register Now</h3>
-                                <form class="contact-form-validated appiontment-one__appion-form" action="http://localhost:8888/assets/inc/sendemail.php" method="post" novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="appiontment-one__appion-input-box">
-                                                <input type="text" name="name" placeholder="Your Name" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="appiontment-one__appion-input-box">
-                                                <input type="email" name="Email" placeholder="Your Email" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="appiontment-one__appion-input-box">
-                                                <input type="text" name="number" placeholder="Your Number" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="appiontment-one__appion-input-box text-message-box">
-                                                <textarea name="message" placeholder="Message here.."></textarea>
-                                            </div>
-                                            <div class="appiontment-one__appion-btn-box">
-                                                <button type="submit" class="thm-btn">Submit Now<span class="icon-plus"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="result"></div>
-                            </div>
-                            <div class="appiontment-one__working-hour wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                <h3 class="appiontment-one__working-hour-title">Others</h3>
-                                <p class="appiontment-one__working-hour-text">Health care is a vital aspect of maintain
-                                    overall well-being, encompassing a range</p>
-                                <ul class="appiontment-one__working-hour-list list-unstyled">
-                                    <li>
-                                        <span>Monday-Sunday</span>
-                                        <p>9 Am To 5 Pm</p>
-                                    </li>
-                                    <li>
-                                        <span>Pre Registrations</span>
-                                        <p>Statrted</p>
-                                    </li>
-                                    <li>
-                                        <span>Registration</span>
-                                        <p>Anyone</p>
-                                    </li>
-                                    <li>
-                                        <span>Free / Premium</span>
-                                        <p>Freemium</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Appiontment One End -->
-
-        <!--FAQ Two Start -->
-        <section class="faq-two">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="faq-two__left">
-                            <div class="section-title-two text-left sec-title-animation animation-style1">
-                                <h6 class="section-title-two__tagline">Fewquently Ask Questions
-                                </h6>
-                                <h3 class="section-title-two__title title-animation">Partner in huge <br> Health Newtoworks
-                                </h3>
-                            </div>
-                            <p class="faq-two__text">Health care is a vital aspect of maintaining overall well-being,
-                                encompassing a range of services from preventive care to treatment for your life</p>
-                            <div class="faq-two__btn-box">
-                                <a href="contact.php.html" class="thm-btn">Contact Us<i class="icon-call"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="faq-two__right">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion-1">
-                                <div class="accrodion wow fadeInLeft" data-wow-delay="100ms">
-                                    <div class="accrodion-title">
-                                        <div class="faq-two-accrodion__count"></div>
-                                        <h4>What should I do in case of a medical emergency?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Healthcare is a crucial aspect of our well-being. From hospitals to the a
-                                                clinics, the encompasses a wide range Healthcare is a crucial aspect of
-                                                our well-being. From hospitals </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion  active wow fadeInRight" data-wow-delay="200ms">
-                                    <div class="accrodion-title">
-                                        <div class="faq-two-accrodion__count"></div>
-                                        <h4>What are Dedicated services from your end?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Healthcare is a crucial aspect of our well-being. From hospitals to the a
-                                                clinics, the encompasses a wide range Healthcare is a crucial aspect of
-                                                our well-being. From hospitals </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion wow fadeInLeft" data-wow-delay="300ms">
-                                    <div class="accrodion-title">
-                                        <div class="faq-two-accrodion__count"></div>
-                                        <h4>What benefits do i get with your platform?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Healthcare is a crucial aspect of our well-being. From hospitals to the a
-                                                clinics, the encompasses a wide range Healthcare is a crucial aspect of
-                                                our well-being. From hospitals </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion wow fadeInRight" data-wow-delay="400ms">
-                                    <div class="accrodion-title">
-                                        <div class="faq-two-accrodion__count"></div>
-                                        <h4>How can I schedule an appointment?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Healthcare is a crucial aspect of our well-being. From hospitals to the a
-                                                clinics, the encompasses a wide range Healthcare is a crucial aspect of
-                                                our well-being. From hospitals </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--FAQ Two End -->
-
-        <!--Newsletter One Start -->
-        <section class="newsletter-one">
-            <div class="container">
-                <div class="newsletter-one__inner">
-                    <div class="newsletter-one__img">
-                        <img src="assets/images/resources/newsletter-one-img-1.png" alt="">
-                    </div>
-                    <div class="newsletter-one__inner-content">
-                        <div class="newsletter-one__shape-1">
-                            <img src="assets/images/shapes/newsletter-one-shape-1.png" alt="">
-                        </div>
-                        <div class="newsletter-one__shape-2 float-bob-y">
-                            <img src="assets/images/shapes/newsletter-one-shape-2.png" alt="">
-                        </div>
-                        <h3 class="newsletter-one__title">Subscribe To Our <br> Newsletter</h3>
-                        <div class="newsletter-one__form-box">
-                            <form class="newsletter-one__form">
-                                <div class="newsletter-one__input">
-                                    <input type="email" placeholder="Enter Your Email">
-                                </div>
-                                <button type="submit" class="thm-btn">Subscribe Now</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Newsletter One End -->
-
-        <!--Testimonial Two Start -->
-        <section class="testimonial-two">
-            <div class="container">
-                <div class="section-title-two text-center sec-title-animation animation-style1">
-                    <h6 class="section-title-two__tagline">Clients Testimonial
-                    </h6>
-                    <h3 class="section-title-two__title title-animation">Enhancing Lives Through <br> Care Your Partner
-                    </h3>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="testimonial-two__left">
-                            <div class="testimonial-two__carousel owl-theme owl-carousel">
-                                <!--Testimonial Two Single Start -->
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__client-info">
-                                            <h4 class="testimonial-two__client-name"><a href="testimonials.php.html">Donald Williamson</a></h4>
-                                            <p class="testimonial-two__client-sub-title">Software Expert</p>
-                                        </div>
-                                        <div class="testimonial-two__rating">
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                        </div>
-                                        <p class="testimonial-two__text">Healthcare is a crucial aspect of our a of the
-                                            well being. From hospitals to clinics and a medical field encompasses a wide
-                                            that be rang services diagnosing</p>
-                                    </div>
-                                </div>
-                                <!--Testimonial Two Single End -->
-                                <!--Testimonial Two Single Start -->
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__client-info">
-                                            <h4 class="testimonial-two__client-name"><a href="testimonials.php.html">Donald Trump</a></h4>
-                                            <p class="testimonial-two__client-sub-title">Financial Expert</p>
-                                        </div>
-                                        <div class="testimonial-two__rating">
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                        </div>
-                                        <p class="testimonial-two__text">Healthcare is a crucial aspect of our a of the
-                                            well being. From hospitals to clinics and a medical field encompasses a wide
-                                            that be rang services diagnosing</p>
-                                    </div>
-                                </div>
-                                <!--Testimonial Two Single End -->
-                                <!--Testimonial Two Single Start -->
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__client-info">
-                                            <h4 class="testimonial-two__client-name"><a href="testimonials.php.html">Williamson</a></h4>
-                                            <p class="testimonial-two__client-sub-title">Marketing Manager</p>
-                                        </div>
-                                        <div class="testimonial-two__rating">
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                        </div>
-                                        <p class="testimonial-two__text">Healthcare is a crucial aspect of our a of the
-                                            well being. From hospitals to clinics and a medical field encompasses a wide
-                                            that be rang services diagnosing</p>
-                                    </div>
-                                </div>
-                                <!--Testimonial Two Single End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="testimonial-two__right">
-                            <div class="testimonial-two__img">
-                                <img src="assets/images/testimonial/testimonial-two-img-1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Testimonial Two End -->
-
-        <!--Blog Two Start -->
-        <section class="blog-two">
-            <div class="container">
-                <div class="blog-two__top">
-                    <div class="section-title-two text-left sec-title-animation animation-style1">
-                        <h6 class="section-title-two__tagline">Latest Blog and news</h6>
-                        <h3 class="section-title-two__title title-animation">Where Health Matters Most<br> CareMed
-                            ClinicVitality
-                        </h3>
-                    </div>
-                    <div class="blog-two__btn-box">
-                        <a href="index.php.html#" class="thm-btn">View All Blogs <span class="icon-plus"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <!--Blog Two Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
-                        <div class="blog-two__single">
-                            <div class="blog-two__img-box">
-                                <div class="blog-two__img">
-                                    <img src="assets/images/blog/blog-2-1.jpg" alt="">
-                                </div>
-                                <div class="blog-two__date-box">
-                                    <div class="blog-two__date-icon">
-                                        <span class="icon-calender"></span>
-                                    </div>
-                                    <div class="blog-two__date-text">
-                                        <p>23 Dec 2024</p>
-                                    </div>
-                                </div>
-                                <div class="blog-two__plus">
-                                    <a href="blog-details.php.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-two__content">
-                                <h3 class="blog-two__title"><a href="blog-details.php.html">Empowering Futures Quality the
-                                        Care Close to Home and way</a></h3>
-                                <ul class="blog-two__meta list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-user"></span>
-                                        </div>
-                                        <p>Admin</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-file"></span>
-                                        </div>
-                                        <p>Catagory</p>
-                                    </li>
-                                </ul>
-                                <div class="blog-two__read-more">
-                                    <a href="blog-details.php.html">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog Two Single End-->
-                    <!--Blog Two Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-two__single">
-                            <div class="blog-two__img-box">
-                                <div class="blog-two__img">
-                                    <img src="assets/images/blog/blog-2-2.jpg" alt="">
-                                </div>
-                                <div class="blog-two__date-box">
-                                    <div class="blog-two__date-icon">
-                                        <span class="icon-calender"></span>
-                                    </div>
-                                    <div class="blog-two__date-text">
-                                        <p>23 Dec 2024</p>
-                                    </div>
-                                </div>
-                                <div class="blog-two__plus">
-                                    <a href="blog-details.php.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-two__content">
-                                <h3 class="blog-two__title"><a href="blog-details.php.html">Your Health, Our Mission Caring
-                                        for You Always</a></h3>
-                                <ul class="blog-two__meta list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-user"></span>
-                                        </div>
-                                        <p>Admin</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-file"></span>
-                                        </div>
-                                        <p>Catagory</p>
-                                    </li>
-                                </ul>
-                                <div class="blog-two__read-more">
-                                    <a href="blog-details.php.html">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog Two Single End-->
-                    <!--Blog Two Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="300ms">
-                        <div class="blog-two__single">
-                            <div class="blog-two__img-box">
-                                <div class="blog-two__img">
-                                    <img src="assets/images/blog/blog-2-3.jpg" alt="">
-                                </div>
-                                <div class="blog-two__date-box">
-                                    <div class="blog-two__date-icon">
-                                        <span class="icon-calender"></span>
-                                    </div>
-                                    <div class="blog-two__date-text">
-                                        <p>23 Dec 2024</p>
-                                    </div>
-                                </div>
-                                <div class="blog-two__plus">
-                                    <a href="blog-details.php.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-two__content">
-                                <h3 class="blog-two__title"><a href="blog-details.php.html">Enhancing Lives Through Care
-                                        Partner in Health</a></h3>
-                                <ul class="blog-two__meta list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-user"></span>
-                                        </div>
-                                        <p>Admin</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-file"></span>
-                                        </div>
-                                        <p>Catagory</p>
-                                    </li>
-                                </ul>
-                                <div class="blog-two__read-more">
-                                    <a href="blog-details.php.html">Read More <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog Two Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Blog Two End -->
-
-       <!DOCTYPE html>
-<html lang="en">
-
-
-
-        <!--Site Footer Three Start-->
-        <footer class="site-footer-three">
-            <div class="site-footer-three__shape-1">
-                <img src="assets/images/shapes/site-footer-three-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="site-footer-three__logo-and-social">
-                    <div class="footer-widget-three__logo">
-                        <a href="index.php.html"><img src="assets/images/mediwalletlogo2.png" alt=""></a>
-                    </div>
-                    <div class="site-footer-three__social">
-                        <a href="index.php.html#"><span class="icon-facebook"></span></a>
-                        <a href="index.php.html#"><span class="icon-twitter"></span></a>
-                        <a href="index.php.html#"><span class="icon-instagram"></span></a>
-                        <a href="index.php.html#"><span class="icon-pinterest"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="site-footer-three__top">
-                <div class="container">
-                    <div class="site-footer-three__top-inner">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                                <div class="footer-widget-three__contact-info">
-                                    <h4 class="footer-widget-three__title">Contact</h4>
-                                    <ul class="footer-widget-three__contact-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget-three__contact-icon">
-                                                <span class="icon-envolope"></span>
-                                            </div>
-                                            <div class="footer-widget-three__contact-content">
-                                                <span>Email</span>
-                                                <p class="footer-widget-three__contact-text"><a href="mailto:info@mediwallet.com">info@mediwallet.in</a>
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget-three__contact-icon">
-                                                <span class="icon-call"></span>
-                                            </div>
-                                            <div class="footer-widget-three__contact-content">
-                                                <span>Phone</span>
-                                                <p class="footer-widget-three__contact-text"><a href="tel:+91 89774 41288">+91 89774 41288</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget-three__contact-icon">
-                                                <span class="icon-pin"></span>
-                                            </div>
-                                            <div class="footer-widget-three__contact-content">
-                                                <span>Location</span>
-                                                <p class="footer-widget-three__contact-text">LB Nagar, Hyderabad - 90</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget-three__page-link">
-                                    <h4 class="footer-widget-three__title">Quicklinks</h4>
-                                    <ul class="footer-widget-three__services-link-list list-unstyled">
-                                        <li>
-                                            <a href="index.php.html">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="about.php.html">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.php.html">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="faq.php.html">FAQ's</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.php.html">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                                <div class="footer-widget-three__services">
-                                    <h4 class="footer-widget-three__title">Product Features</h4>
-                                    <ul class="footer-widget-three__services-link-list list-unstyled">
-                                        <li><a href="index.php.html#"> Product Objective</a></li>
-                                             <li><a href="index.php.html#">PHR Benefits</a></li>
-                                            <li><a href="index.php.html#">Centralized Health Records</a></li>
-                                            <li><a href="index.php.html#">Individual Portals</a></li>
-                                            <li><a href="index.php.html#">Personal Health Record</a></li>
-                                            <li><a href="index.php.html#">Cloud Based Architecture</a></li>
-                                            <li><a href="index.php.html#">Health Information Exchange</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget-three__newsletter-box">
-                                    <h4 class="footer-widget-three__title">Stay Connected</h4>
-                                    <p class="footer-widget-three__newsletter-text">Mediwallet care is essential for
-                                        maintaining oral health</p>
-                                    <div class="footer-widget-three__newsletter">
-                                        <input type="email" placeholder="Email address" name="EMAIL">
-                                        <button type="submit" class="thm-btn">Subcribe
-                                            Now<span class="icon-paper-plane"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="site-footer-three__bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="site-footer-three__bottom-inner">
-                                <div class="site-footer-three__copyright">
-                                    <p class="site-footer-three__copyright-text">© <a href="index.php.html#">Mediwallet</a>
-                                        2025
-                                        |
-                                        All Rights Reserved</p>
-                                </div>
-                                <div class="site-footer-three__bottom-menu-box">
-                                    <ul class="list-unstyled site-footer-three__bottom-menu">
-                                        <li><a href="index.php.html#">Trems & Conditions</a></li>
-                                        <li><a href="index.php.html#">Privacy Policy</a></li>
-                                        <li><a href="index.php.html#">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--Site Footer Three End-->
-
-
-
-
-    </div><!-- /.page-wrapper -->
-
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a href="index.php.html" aria-label="logo image"><img src="assets/images/mediwalletlogo2.png" width="135" alt=""></a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:info@mediwallet.in">info@mediwallet.in</a>
-                </li>
-                <li>
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+91 89774 41288">+91 89774 41288</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <a href="index.php.html#" class="fab fa-twitter"></a>
-                    <a href="index.php.html#" class="fab fa-facebook-square"></a>
-                    <a href="index.php.html#" class="fab fa-pinterest-p"></a>
-                    <a href="index.php.html#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
         </div>
-        <!-- /.mobile-nav__content -->
+        <!-- End Preloader Area -->
+
+		<!-- Start Header Area -->
+		<!--<div class="nivo-header-style-one fixed-top">
+			<div class="header-wrap">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-6">
+							<ul class="header-information ">
+								<li>
+									<a href="tel:+(321)-948-754"> 
+										<i class="fa fa-phone"></i> 
+										+91 89774 41288
+									</a>
+								</li>
+								<li>
+									<a href="/cdn-cgi/l/email-protection#">
+										<i class="fa fa-envelope"></i>
+										<span class="__cf_email__" data-cfemail="">info@mediwallet.in</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<ul class="social-icon">
+								<li>
+									Follow Us:
+								</li>
+								<li>
+									<a href="https://www.facebook.com/login/" target="_blank">
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/i/flow/login" target="_blank">
+										<i class="fa-brands fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/login" target="_blank">
+										<i class="fa-brands fa-linkedin-in"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/accounts/login/" target="_blank">
+										<i class="fa-brands fa-instagram"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="https://www.youtube.com/accounts/login/" target="_blank">
+										<i class="fa-brands fa-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>-->
+			<div class="navbar-area">
+				<!-- Menu For Mobile Device -->
+				<div class="mobile-nav">
+					<a href="index.php.html" class="logo">
+						<img src="images/medilogo.png" alt="MediWallet logo">
+					</a>
+				</div>
+
+				<!-- Menu For Desktop Device -->
+				<div class="nivo-nav-one">
+					<div class="main-nav">
+						<nav class="navbar navbar-expand-md navbar-light">
+							<div class="container">
+								<a class="navbar-brand" href="index.php.html">
+									<img src="images/medilogo.png" alt="MediWallet logo">
+								</a>
+		
+								<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+									<ul class="navbar-nav m-auto">
+										<li class="nav-item">
+											<a href="index.php.html" class="nav-link">Home</a>
+										</li>
+										<li class="nav-item">
+											<a href="about.php.html" class="nav-link">About Us</a>
+										</li>
+										<li class="nav-item">
+											<a href="causes-grid.php.html" class="nav-link">Our Products</a>
+										</li>
+                                        <li class="nav-item">
+											<a href="services.php.html" class="nav-link">Our Services</a>
+										</li>
+										<li class="nav-item">
+											<a href="faq.php.html" class="nav-link">FAQ</a>
+										</li>
+										<li class="nav-item">
+											<a href="contact.php.html" class="nav-link">Contact Us</a>
+										</li>
+									</ul>
+									<div class="others-option">
+										<div class="others-options">
+										</div>	
+										<a href="register.php.html" class="donate">Login / Register</a>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Header Area -->
+
+		  
+
+	<!-- Start Hero Slider Area -->
+<!--- <section class="hero-slider-area">
+//     <div class="hero-slider owl-carousel owl-theme">
+//         <div class="hero-slider-item slider-item-bg-1">
+//             <div class="d-table">
+//                 <div class="d-table-cell">
+//                     <div class="container">
+//                         <div class="hero-slider-text">
+//                             <span>MediWallet</span>
+//                             <h1>A centralized location <br>for your health records</h1>
+//                             <p>The Mediwallet Patient Portal, often known as the Personal Health <br>
+//                                 Record gives customers the ability to keep up with medical developments.
+//                             </p>	
+//                             <div class="slider-button">
+//                                 <a class="default-btn" href="contact.php">Join Us</a>
+//                             </div>	
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="hero-slider-item slider-item-bg-2">
+//             <div class="d-table">
+//                 <div class="d-table-cell">
+//                     <div class="container">
+//                         <div class="hero-slider-text">
+//                             <span>MediWallet</span>
+//                             <h1>Personal Health Record <br>for every Individual</h1>
+//                             <p>Manage your Medical Profile for easy sharing and with <br>
+//                                 Doctors, Lab Centers and individuals of your family</p>	
+//                             <div class="slider-button">
+//                                 <a class="default-btn" href="contact.php">Join Us</a>
+//                             </div>	
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="hero-slider-item slider-item-bg-3">
+//             <div class="d-table">
+//                 <div class="d-table-cell">
+//                     <div class="container">
+//                         <div class="hero-slider-text">
+//                             <span>MediWallet</span>
+//                             <h1>Book Your Appointments <br>with Easy Access</h1>
+//                             <p>A Modernized Application with different portals for Individual Logins <br>
+//                                 and bookings for Appointments and other services booking.</p>	
+//                             <div class="slider-button">
+//                                 <a class="default-btn" href="contact.php">Join Us</a>
+//                             </div>	
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="shape shape-11">
+//         <img src="images/shape-11.png" alt="">
+//     </div>
+//     <div class="shape shape-12">
+//         <img src="images/shape-12.png" alt="">
+//     </div>
+// </section>--->
+<!-- End Hero Slider Area -->
+
+
+<section class="hero-slider-area">
+    <div class="hero-slider owl-carousel owl-theme">
+        <div class="hero-slider-item slider-item-bg-1">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="hero-slider-text">
+                            <span>MediWallet</span>
+                            <h1>A centralized location <br>for your health records</h1>
+                            <p>The Mediwallet Patient Portal, often known as the Personal Health <br>
+                                Record gives customers the ability to keep up with medical developments.
+                            </p>	
+                            <div class="slider-button">
+                                <a class="default-btn" href="contact.php.html">Join Us</a>
+                            </div>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+       
     </div>
-    <!-- /.mobile-nav__wrapper -->
+ 
+</section>
+
+<!-- Start Help Area -->
+<section class="partner-area pb-100" style="margin-top: 60px;">
+    <div class="container">
+
+        <!-- Banner Ad Area -->
+       <!--- <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+            <div style="width: 1920px; height: 200px; border: 2px solid #ccc; display: flex; align-items: center; justify-content: center;">
+                <img src="images/4.jpg" alt="Banner Ad" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>--->
 
 
-    <a href="index.php.html#" data-target="html" class="scroll-to-target scroll-to-top">
-        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
-        <span class="scroll-to-top__text"> Go Back Top</span>
-    </a>
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="images/add/1.jpg" style="max-width: 100%; max-height: 60%;">
+  <!--<div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/add/2.jpg" style="max-width: 100%; max-height: 60%;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/add/3.jpg" style="max-width: 100%; max-height: 60%;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/add/4.jpg" style="max-width: 100%; max-height: 60%;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/add/5.jpg" style="max-width: 100%; max-height: 60%;">
+  
+</div>
 
 
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jarallax.min.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/jquery.circle-progress.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/wNumb.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery-sidebar-content.js"></script>
-    <script src="assets/js/gsap/gsap.js"></script>
-    <script src="assets/js/gsap/ScrollTrigger.js"></script>
-    <script src="assets/js/gsap/SplitText.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/timePicker.js"></script>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+   <span class="dot"></span>
+    <span class="dot"></span>
+   
+</div>
+        <!-- End Banner Ad -->
+
+    </div>
+</section>
+<!-- End Help Area -->
+
+        <!-- Start Partner Area -->
+		<section class="partner-area pb-100">
+			<div class="container">
+				<div class="section-title">
+					<span></span>
+					<h2>We are Collaborating with our Channel Partners to integrate our services</h2>
+					<p>We collaborate with leading healthcare, insurance, and tech brands to seamlessly integrate our services, enhancing care, access, and efficiency for all.</p>
+				</div>
+				<div class="partner-wrap owl-carousel owl-theme">
+					<div class="single-logo">
+						<img src="images/brl1.jpg" alt="Partner">
+					</div>
+					<div class="single-logo">
+						<img src="images/brl2.jpg" alt="Partner">
+					</div>
+					<div class="single-logo">
+						<img src="images/brl3.jpg" alt="Partner">
+					</div>
+					<div class="single-logo">
+						<img src="images/brl4.jpg" alt="Partner">
+					</div>
+					<div class="single-logo">
+						<img src="images/brl5.jpg" alt="Partner">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Partner Area -->
 
 
+        <!-- Start About Area -->
+		<section class="about-area two">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="about-img">
+							<img src="images/objective.jpeg" alt="About">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-text ptb-100">
+							<h2>Take Control of Your Health Records with ABHA </h2>
+                            	<h4>Get Easy Access to your Medical Records Anytime, Anywhere </h4>
+							<p class="mb-15">With ABHA, patients can store all their medical data—such as prescriptions, lab reports, doctor consultations, and hospital visits—securely in one place. This digital health ecosystem ensures seamless healthcare delivery by allowing authorized doctors and hospitals to access accurate medical history, enabling better diagnosis and treatment.</p>
+                        <h2>Start Your ABHA Journey Effortlessly</h2>
+                         <h4>  Create your unique ABHA Address </h4>
+                           <p class="mb-15">With the ABHA Health ID, you can easily organize, access your medical records and safely share them with healthcare professionals</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End About Area -->
+
+        <!-- Start Active Campaing Area -->
+		<section class="active-campaing-area f7fafe-bg two pt-200">
+			<div class="container">
+				<div class="section-title">
+					<span>Active Product Features</span>
+					<h2>Different Portal Access to Every Users</h2>
+					<p>We provide customized portal access for each user type—patients, doctors, and lab centers—for a personalized, secure, and efficient experience.</p>
+				</div>
+				<div class="col-md-12">
+                <div class="row">
+                <div class="single-campaing col-md-3">
+						<div class="campaing-img">
+							<img src="images/objective2.jpeg" alt="">
+						</div>
+						<div class="campaing-text">
+							<div class="progress pink">
+								<div class="progress-bar">
+									<div class="progress-value" style="width: 50%;">50%</div>
+								</div>
+							</div>
+							<ul>
+								<li><span>Features Targeted:</span>100</li>
+								<li class="left-site"><span>Goal:</span> 100%</li>
+							</ul>
+							<h3>Product Objective</h3>
+							<p>The PHR model brings all users of health information together in one place to collect and share....</p>
+							<a class="read-more" href="product-objective.php.html">Read More</a>
+						</div>
+					</div>
+					<div class="single-campaing col-md-3">
+						<div class="campaing-img">
+							<img src="images/add/pportal6.jpeg" alt="">
+						</div>
+						<div class="campaing-text">
+							<div class="progress pink">
+								<div class="progress-bar">
+									<div class="progress-value" style="width: 50%;">50%</div>
+								</div>
+							</div>
+							<ul>
+								<li><span>Users Tg:</span> 5000</li>
+								<li class="left-site"><span>Goal:</span> Year:2027</li>
+							</ul>
+							<h3>Patient Portal</h3>
+							<p>Patient Portal comes with Profile Management, the medical history, appointments, diagnosis....</p>
+							<a class="read-more" href="patient-portal.php.html">Read More</a>
+						</div>
+					</div>
+					<div class="single-campaing col-md-3">
+						<div class="campaing-img">
+							<img src="images/add/portal1.jpeg" alt="">
+						</div>
+						<div class="campaing-text">
+							<div class="progress pink">
+								<div class="progress-bar">
+									<div class="progress-value" style="width: 50%;">50%</div>
+								</div>
+							</div>
+							<ul>
+								<li><span>Hospitals Tg:</span> 100</li>
+								<li class="left-site"><span>Goal:</span> Year:2027</li>
+							</ul>
+							<h3>Clinic / Hospital Portal</h3>
+							<p>Our Hospital Portal offers seamless access to patient records, appointment</p>
+							<a class="read-more" href="hospital-portal.php.html">Read More</a>
+						</div>
+					</div>
+					<div class="single-campaing col-md-3">
+						<div class="campaing-img">
+							<img src="images/add/portal3.jpeg" alt="">
+						</div>
+						<div class="campaing-text">
+							<div class="progress pink">
+								<div class="progress-bar">
+									<div class="progress-value" style="width: 50%;">50%</div>
+								</div>
+							</div>
+							<ul>
+								<li><span>Lab Centers Tg:</span>500</li>
+								<li class="left-site"><span>Goal:</span> Year:2027</li>
+							</ul>
+							<h3>Lab Center Portal</h3>
+							<p>The Lab Center Portal enables to manage test orders, upload reports, and sync data directly ....</p>
+							<a class="read-more" href="diagnostic-portal.php.html">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- End Active Campaing Area -->
+
+		<!-- Start Get Started Today Area -->
+		<section class="get-started-today-area pt-100 mb-4">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="get-started-img">
+							<img src="http://localhost:8000/images/get-started-get-started.png" alt="Donation">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="get-started-title">
+							<span>Get Started Today</span>
+						
+						</div>
+					                    
+                        	<h3>🌐 Why MediWallet?</h3>
+<p>💳 Instant Medical Payments
+Pay hospital bills, pharmacy purchases, and lab fees directly from your digital health wallet—powered by secure UPI & AI-driven authentication.</p>
+
+<h3>📂 Unified Health Records</h3>
+<p>Store, access, and share your medical history with one tap. Encrypted. Cloud-based. Always in your control.</p>
+
+<h3>📡 Real-Time Insurance Sync</h3>
+<p>Connect your policy. Track your claims. Get instant updates. No paperwork, no confusion—just clarity.</p>
 
 
-    <!-- template js -->
-    <script src="assets/js/script.js"></script>
-</body>
+<h3>🧠 Smart Recommendations</h3>
+<p>Our AI suggests personalized health packages, discounts, and insurance tips—designed around you.</p>
 
-</html>  
+<h3>🚀 One Wallet. Infinite Possibilities.</h3>
+<p>Fast-Track Hospital Checkouts
+Say goodbye to waiting lines. With MediWallet, your bill is paid the moment you walk out.<br>
+
+Family Health Management
+Add dependents, track their medical history, and manage everyone’s wellness—all in one place.</p>
+
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Get Started Today Area -->
+
+		<!-- Start Help Area -->
+		<section class="help-area two">
+			<div class="container">
+				<div class="help-title">
+					<h2>Our Planning</h2>
+					<p>As per our research Here is the Mediwallet expecting to reach the targets of Users by different portals by 2027.</p>
+					<a class="default-btn" href="register.php.html">Register Now</a>
+					<a class="default-btn" href="contact.php.html">Contact Now</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="counter-wrap">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 col-md-3">
+							<div class="single-conuter">
+								<span class="odometer" data-count="20000">00</span>
+								<p>Patients</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-md-3">
+							<div class="single-conuter">
+								<span class="odometer" data-count="200">00</span>
+								<p>Hospitals</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-md-3">
+							<div class="single-conuter">
+								<span class="odometer" data-count="3000">00</span>
+								<p>Lab Centers</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-md-3">
+							<div class="single-conuter">
+								<span class="odometer" data-count="150">00</span>
+								<p>Services</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Help Area -->
+
+		<!-- Start Organization  Area -->
+		<section class="organaization-area ptb-100">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="organaization-text">
+							<h2>Keep Your All Medical Records in Just a One Click </h2>
+							<p>A mediwallet personal health record is
+nothing more than a compilation of
+health-related data. You already have a
+basic personal health record if you have
+a shot record or a folder of medical
+paperwork.
+And you've probably experienced paper
+records' major drawback: You hardly
+ever have them on hand when you need
+them.</p>
+							<a class="default-btn" href="register.php.html">
+								Register Now
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="organaization">
+							<img src="http://localhost:8000/images/img-organaization-2.jpg" alt="Organization">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Organaization Area -->
+
+		<!-- Start Latest News Area -->
+		<section class="latest-news-area ptb-100-70">
+			<div class="container">
+				<div class="section-title">
+					<span>Latest News</span>
+					<h2>Follow Our Blogs to get every update </h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6">
+						<div class="single-news">
+							<div class="news-img">
+								<a href="blog-details.php.html">
+									<img src="images/8.jpg" alt="News">
+								</a>
+								<div class="date">
+									<span>1 November</span>
+								</div>
+							</div>
+							<div class="news-text">
+								<ul>
+									<li>
+										<i class="flaticon-man-user"></i>
+										By
+										<a href="blog-details.php.html">Admin</a>
+									</li>
+									<li>
+										<i class="flaticon-speech-bubbles-comment-option"></i>
+										<a href="blog-details.php.html">3 Comments</a>
+									</li>
+								</ul>
+								<h3>
+									<a href="blog-details.php.html">Highlights of the Portal</a>
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+								<a class="read-more" href="blog-details.php.html">
+									Read More
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="single-news">
+							<div class="news-img">
+								<a href="blog-details.php.html">
+									<img src="images/10.jpg" alt="News">
+								</a>
+								<div class="date">
+									<span>2 November</span>
+								</div>
+							</div>
+							<div class="news-text">
+								<ul>
+									<li>
+										<i class="flaticon-man-user"></i>
+										By
+										<a href="blog-details.php.html">Admin</a>
+									</li>
+									<li>
+										<i class="flaticon-speech-bubbles-comment-option"></i>
+										<a href="blog-details.php.html">3 Comments</a>
+									</li>
+								</ul>
+								<h3>
+									<a href="blog-details.php.html">
+										A place start a new life with peace
+									</a>
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+								<a class="read-more" href="blog-details.php.html">
+									Read More
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+						<div class="single-news">
+							<div class="news-img">
+								<a href="blog-details.php.html">
+									<img src="images/1.jpg" alt="News">
+								</a>
+								<div class="date">
+									<span>3 November</span>
+								</div>
+							</div>
+							<div class="news-text">
+								<ul>
+									<li>
+										<i class="flaticon-man-user"></i>
+										By
+										<a href="blog-details.php.html">Admin</a>
+									</li>
+									<li>
+										<i class="flaticon-speech-bubbles-comment-option"></i>
+										<a href="blog-details.php.html">3 Comments</a>
+									</li>
+								</ul>
+								<h3>
+								<a href="blog-details.php.html">Build application for Patients</a>
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+								<a class="read-more" href="blog-details.php.html">
+									Read More
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Latest News Area -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active01", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active01";
+  setTimeout(showSlides, 1600); // Change image every 2 seconds
+}
+</script>
+		
+		 <!DOCTYPE html>
+<html lang="zxx">
+
+
+		<!-- Start Footer Top Area -->
+		<section class="footer-top-area ptb-100-70">
+			<div class="container">
+				<div class="section-title">
+					<span>Stay Updated</span>
+					<h2>Newsletter</h2>
+					<div class="widget subscribe">
+						<form class="newsletter-form subscribe-form" data-toggle="validator">
+							<input type="email" class="input-newsletter subscribe-field" placeholder="Enter email address" name="EMAIL" required autocomplete="off">
+		
+							<button type="submit" class="search-submit default-btn subscribe-submit">Subscribe</button>
+							<div id="validator-newsletter" class="form-result"></div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<a href="index.php.html">
+								<img src="images/mediwalletlogo2.png" alt="">
+							</a>
+							<p>At Mediwallet, we are revolutionizing the way medical reports are managed by creating a unified platform that brings all your health records into one place.</p>
+							<ul class="social-icon">
+								<li>
+									<a href="https://www.facebook.com/login/" target="_blank">
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/i/flow/login" target="_blank">
+										<i class="fa-brands fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/login" target="_blank">
+										<i class="fa-brands fa-linkedin-in"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/accounts/login/" target="_blank">
+										<i class="fa-brands fa-instagram"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="https://www.youtube.com/accounts/login/" target="_blank">
+										<i class="fa-brands fa-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<h3>Product features</h3>
+							<ul>
+                            <li>
+									<a href="product-objective.php.html">Product Objective</a>
+								</li>
+								<li>
+									<a href="patient-portal.php.html">Patient Portal</a>
+								</li>
+								<li>
+									<a href="hospital-portal.php.html">Hospital Portal</a>
+								</li>
+								<li>
+									<a href="diagnostic-portal.php.html">Lab Center Portal</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<h3>Quicklinks</h3>
+							<ul>
+								<li>
+									<a href="about.php.html">About</a>
+								</li>
+                                <li>
+									<a href="services.php.html">Services</a>
+								</li>
+                                <li>
+									<a href="faq.php.html">FAQ</a>
+								</li>
+								<li>
+									<a href="blog-grid.php.html">Blogs</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<h3>Address</h3>
+							<ul class="address">
+								<li>
+									<i class="fa fa-map-marker"></i>
+									# 2-4-277, Road No 5 , Snehapuri Colony, Hyderabad - 500035
+								</li>
+                                <li>
+									<i class="fa fa-map-marker"></i>
+									# 13985, dutch Hollow DR, Frisco, TX, USA - 75035
+								</li>
+								<li>
+									<i class="fa fa-envelope"></i>
+									<a href="index.php.html"><span class="__cf_email__" data-cfemail="">info@mediwallet.in</span></a>
+								</li>
+								<li>
+									<i class="fa fa-phone"></i>
+									<a href="tel:+91 89774 41288">+91 89774 41288</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Footer Top Area -->
+
+		<!-- Start Footer Bottom Area -->
+		<footer class="footer-bottom-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div>
+							<p>
+                                Copyright2025 <span>@ MediWallet</span> Developed by <a href="https://technology360.in">Technology360</a>
+                            </p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<ul class="terms-conditions">
+							<li><a href="terms-conditions.php.html">Terms &amp; Conditions</a></li>
+							<li><a href="privacy-policy.php.html">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Bottom Area -->
+		
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="fa fa-angle-double-up"></i>
+			<i class="fa fa-angle-double-up"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        
+        <!-- Jquery Min JS -->
+        <script data-cfasync="false" src="js/cloudflare-static-email-decode.min.js"></script><script src="js/js-jquery.min.js"></script>
+        <!-- Bootstrap Bundle Min JS -->
+        <script src="js/js-bootstrap.bundle.min.js"></script>
+        <!-- Meanmenu Min JS -->
+		<script src="js/js-meanmenu.min.js"></script>
+        <!-- Wow Min JS -->
+        <script src="js/js-wow.min.js"></script>
+        <!-- Owl Carousel Min JS -->
+		<script src="js/js-owl.carousel.min.js"></script>
+        <!-- Imagelightbox Min JS -->
+		<script src="js/js-imagelightbox.min.js"></script>
+        <!-- Appear Min JS -->
+		<script src="js/js-appear.min.js"></script>
+        <!-- Odometer Min JS -->
+		<script src="js/js-odometer.min.js"></script>
+		<!-- Mixitup Min JS -->
+		<script src="js/js-mixitup.min.js"></script>
+		<!-- Form Validator Min JS -->
+		<script src="js/js-form-validator.min.js"></script>
+		<!-- Contact JS -->
+		<script src="js/js-contact-form-script.js"></script>
+		<!-- Ajaxchimp Min JS -->
+		<script src="js/js-ajaxchimp.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/js-custom.js"></script>
+    </body>
+</html>
+  
